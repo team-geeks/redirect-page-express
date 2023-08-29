@@ -1,0 +1,24 @@
+{
+  "name": "foo",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.3",
+    "crc-32": "^1.2.0",
+    "crc32": "^0.2.2",
+    "dateformat": "^3.0.3",
+    "debug": "~2.6.9",
+    "express": "~4.16.0",
+    "express-validator": "^6.14.0",
+    "fast-crc32c": "^1.0.4",
+    "http-errors": "~1.6.2",
+    "jade": "~1.11.0",
+    "md5": "^2.2.1",
+    "morgan": "~1.9.0",
+    "nodemon": "^1.17.3",
+    "sha256": "^0.2.0"
+  }
+}
