@@ -133,7 +133,7 @@ router.post(
   }
 );
 
-router.all("/paycore-callback-response-page", function (req, res, next) {
+router.all("/airpay/recharge/succr/succ/ok", function (req, res, next) {
   var CRC32 = require("crc-32");
   console.log("REques -> ", req)
   console.log("REquest body -> ", req.body)
