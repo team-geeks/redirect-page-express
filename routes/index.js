@@ -117,7 +117,7 @@ router.post(
       req.body.buyerFirstName +
       req.body.buyerLastName +
       req.body.buyerAddress +
-      req.body.buyerCity +
+      req.body.buyerCity +9
       req.body.buyerState +
       req.body.buyerCountry +
       req.body.amount +
@@ -133,11 +133,11 @@ router.post(
   }
 );
 
-router.all("/airpay/recharge/succr/succ/ok", function (req, res, next) {
+router.post("/airpay/recharge/succr/succ/ok", function (req, res, next) {
   var CRC32 = require("crc-32");
-  console.log("REques -> ", req)
-  console.log("REquest body -> ", req.body)
-  console.log("REquest body 2 -> ", req.files)
+  console.log("REques -> ", req);
+  console.log("REquest body -> ", req.body);
+  console.log("REquest body 2 -> ", req.files);
   var txnhash = CRC32.str(
     req.body.TRANSACTIONID +
       ":" +
@@ -181,6 +181,10 @@ router.all("/airpay/recharge/succr/succ/ok", function (req, res, next) {
   console.log(txnhash);
 
   res.render("response", { txnhash: txnhash, txndata: txndata });
+});
+
+router.post("/airpay/webhook", function (req, res, next) {
+  console.log("Response from airpay webhook -> ", req)
 });
 
 module.exports = router;
