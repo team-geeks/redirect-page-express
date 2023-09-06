@@ -185,6 +185,8 @@ router.post("/airpay/recharge/succr/succ/ok", function (req, res, next) {
 
 router.post("/airpay/webhook", function (req, res, next) {
   console.log("Response from airpay webhook -> ", req)
+  console.log("Response from airpay webhook req.body -> ", req.body)
+  console.log("Response from airpay webhook req headers -> ", req.headers)
   res.send({
     "message" : "Success"
   })
